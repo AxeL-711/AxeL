@@ -1,13 +1,11 @@
+// commands.js
 const commands = [
-  {
-    name: "ping",
-    description: "يتحقق إذا البوت شغال"
-  }
+  { name: "ping", description: "يتحقق إذا البوت شغال" },
+  { name: "hello", description: "يسلم على البوت" },
+  { name: "serverinfo", description: "يعطيك معلومات عن السيرفر" },
+  { name: "help", description: "يعطيك قائمة كل الأوامر" },
+  { name: "lock", description: "يقفل الروم الحالي" },
+  { name: "unlock", description: "يفتح الروم الحالي" }
 ];
-client.on('interactionCreate', async interaction => {
-  if (!interaction.isCommand()) return; // يتأكد إن التفاعل أمر سلاش
 
-  if (interaction.commandName === 'ping') {
-    await interaction.reply('Pong! 🏓'); // هنا البوت يرد على الأمر
-  }
-});
+module.exports = commands;
