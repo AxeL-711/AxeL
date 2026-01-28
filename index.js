@@ -23,7 +23,7 @@ const BOT_ID = " 1458632443476316414 ";
 const GUILD_ID = " 1458293733001924731 ";
 
 client.on('ready', () => {
-  console.log(`${client.user.tag} شغال!`);
+ console.log(`${client.user.tag} شغال!`);
 });
 
 client.on('interactionCreate', async interaction => {
