@@ -1,13 +1,13 @@
-// commands.js
 const commands = [
   {
-    name: "serverinfo",
-    description: "يعطيك معلومات عن السيرفر"
-  },
-  {
-    name: "hello",
-    description: "يسلم عليك البوت"
+    name: "ping",
+    description: "يتحقق إذا البوت شغال"
   }
 ];
+client.on('interactionCreate', async interaction => {
+  if (!interaction.isCommand()) return; // يتأكد إن التفاعل أمر سلاش
 
-module.exports = commands;
+  if (interaction.commandName === 'ping') {
+    await interaction.reply('Pong! 🏓'); // هنا البوت يرد على الأمر
+  }
+});
